@@ -1,5 +1,4 @@
 [global_config]
-  window_state = maximise
   borderless = True
   tab_position = hidden
   title_transmit_bg_color = "#ffffff"
