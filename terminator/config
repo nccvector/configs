@@ -13,8 +13,8 @@
   go_down = <Primary>j
   go_left = <Primary>h
   go_right = <Primary>l
-  split_horiz = <Primary><Alt>h
-  split_vert = <Primary><Alt>v
+  split_horiz = <Primary><Alt>minus
+  split_vert = <Primary><Alt>backslash
 [profiles]
   [[default]]
     icon_bell = False
