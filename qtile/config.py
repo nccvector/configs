@@ -25,8 +25,16 @@
 # SOFTWARE.
 
 import os
-os.system("setxkbmap -option caps:escape")
-os.system("sleep 0.05 && nitrogen --random --set-zoom-fill")
+from subprocess import Popen
+
+# Launching picom async (so that it does not block qtile)
+p = Popen(['picom'])
+
+os.system("setxkbmap -option caps:escape")  # Replace capslock with escape
+os.system("sleep 0.05 && nitrogen --random --set-zoom-fill")  # Random wallpaper
+
+# Laptop touch pad settings
+# Do `xinput list` to find out the name of your device
 os.system('xinput set-prop "ELAN0710:01 04F3:30ED Touchpad" "libinput Tapping Enabled" 1')
 os.system('xinput set-prop "ELAN0710:01 04F3:30ED Touchpad" "libinput Natural Scrolling Enabled" 1')
 
@@ -199,3 +207,6 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+# Enable picom after a good delay
+# os.system("sleep 3 && picom")  # Enable compositor
