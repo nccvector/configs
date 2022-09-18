@@ -26,7 +26,7 @@
 
 import os
 os.system("setxkbmap -option caps:escape")
-os.system("sleep 0.05 && nitrogen --restore")
+os.system("sleep 0.05 && nitrogen --random --set-zoom-fill")
 os.system('xinput set-prop "ELAN0710:01 04F3:30ED Touchpad" "libinput Tapping Enabled" 1')
 os.system('xinput set-prop "ELAN0710:01 04F3:30ED Touchpad" "libinput Natural Scrolling Enabled" 1')
 
@@ -73,7 +73,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
