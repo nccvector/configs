@@ -5,3 +5,7 @@ yes | cp -rf ~/.config/nvim/ $SCRIPT_DIR
 yes | cp -rf ~/.config/qtile/ $SCRIPT_DIR
 yes | cp -rf ~/.config/terminator/ $SCRIPT_DIR
 
+git pull
+git add .
+git commit -m "synced on $date"
+git push
