@@ -130,7 +130,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="Fira Code SemiBold",
     fontsize=12,
     padding=3,
 )
@@ -150,8 +150,14 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                widget.TextBox(text="brightness:"),
+                widget.Backlight(
+                        brightness_file="/sys/class/backlight/intel_backlight/brightness",
+                        max_brightness_file="/sys/class/backlight/intel_backlight/max_brightness",
+                    ),
+                widget.TextBox(text="battery:"),
+                widget.Battery(),
+                widget.BatteryIcon(),
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
