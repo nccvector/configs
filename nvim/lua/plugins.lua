@@ -43,14 +43,26 @@ return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use { 'ellisonleao/gruvbox.nvim' }
+  use 'nvie/vim-flake8'
+
+  use "savq/melange"
+
+  use { 'RRethy/vim-illuminate' }
+
+  use { 'tpope/vim-fugitive' }
+
+  use { 'morhetz/gruvbox' }
 
   use { 'nvim-lua/plenary.nvim' }
+  
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use { "nvim-telescope/telescope-file-browser.nvim" }
   
   use {'nvim-treesitter/nvim-treesitter'}
 
@@ -62,8 +74,11 @@ return packer.startup(function(use)
     tag = 'nightly', -- optional, updated every week. (see issue #1193)
   }
 
--- Lua
   use { 'folke/which-key.nvim' }
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
 
   if PACKER_BOOTSTRAP then
 		require("packer").sync()

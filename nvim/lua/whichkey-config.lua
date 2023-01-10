@@ -1,15 +1,20 @@
 local wk = require('which-key')
-
 wk.setup {}
+
+-- Cheating, setting up neogit in which key config
+local neogit = require('neogit')
+neogit.setup {}
 
 -- Window
 local windowmappings = {
   w = {
     name = 'Window',
-    l = { '<C-w>l<cr>', 'Jump Right' },
-    h = { '<C-w>h<cr>', 'Jump Left' },
-    k = { '<C-w>k<cr>', 'Jump Up' },
-    j = { '<C-w>j<cr>', 'Jump Down' },
+    l = { '<C-w>l', 'Jump Right' },
+    h = { '<C-w>h', 'Jump Left' },
+    k = { '<C-w>k', 'Jump Up' },
+    j = { '<C-w>j', 'Jump Down' },
+    v = { '<C-w>v', 'Split vertical' },
+    s = { '<C-w>s', 'Split horizontal' },
   }
 }
 
@@ -21,6 +26,10 @@ local buffermappings = {
     n = { ':bnext<cr>', 'Next Buffer' },
     p = { ':bprevious<cr>', 'Previous Buffer' },
     d = { ':bdelete<cr>', 'Delete Buffer' },
+    H = { '<C-w><S-h><cr>', 'Move buffer left' },
+    L = { '<C-w><S-l><cr>', 'Move buffer right' },
+    J = { '<C-w><S-j><cr>', 'Move buffer down' },
+    K = { '<C-w><S-k><cr>', 'Move buffer up' },
   }
 }
 
@@ -30,7 +39,8 @@ local filemappings = {
     name = 'File',
     f = { ':Telescope find_files<cr>', 'Find File' },
     r = { ':Telescope oldfiles<cr>', 'Recent Files' },
-    t = { ':NvimTreeToggle<cr>', 'Toggle File Explorer' },
+--    t = { ':NvimTreeToggle<cr>', 'Toggle File Explorer' },
+    t = { ':Telescope file_browser<cr>', 'Toggle File Explorer' },
     s = { ':w<cr>', 'Save' },
     n = { 'New File' }
   }
@@ -40,8 +50,8 @@ local filemappings = {
 local quitmappings = {
   q = {
     name = 'Quit',
-    q = { ':q!<cr>', 'Quit' },
-    Q = { ':wq<cr>', 'Save and Quit' },
+    q = { ':qa!<cr>', 'Quit' },
+    Q = { ':wqa<cr>', 'Save and Quit' },
   }
 }
 
@@ -55,7 +65,9 @@ end
 local togglemappings = {
   t = {
     name = 'Toggle',
-    n = { function() ToggleLineNumber() end, 'Toggle line number' },
+    n = { function() ToggleLineNumber() end, 'Toggle Line Number' },
+    t = { ':ToggleTerm<cr>', 'Toggle Terminal' },
+    l = { ':Telescope live_grep<cr>', 'Toggle Terminal' }
   }
 }
 
