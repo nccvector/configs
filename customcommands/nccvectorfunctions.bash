@@ -10,7 +10,7 @@ function gcops {
 }
 
 # Git commit, push and set upstream
-function gcosu{
+function gcosu {
     git pull
     git add .
     git commit -m "$1"
