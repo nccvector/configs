@@ -14,8 +14,8 @@ function gcosu {
     git pull
     git add .
     git commit -m "$1"
-    BRANCH_NAME = ${git symbolic-ref --short -q HEAD}
+    BRANCH_NAME = git symbolic-ref --short -q HEAD
     echo "Upstreaming $BRANCH_NAME"
-    git push -u origin/$BRANCH_NAME
+    # git push -u origin/$BRANCH_NAME
 }
 
