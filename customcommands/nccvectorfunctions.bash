@@ -1,5 +1,4 @@
 NCCVECTOR_FUNCTIONS=true
-echo "nccvector: Functions Registered"
 
 # GIT FUNCTIONS
 # Git commit and push

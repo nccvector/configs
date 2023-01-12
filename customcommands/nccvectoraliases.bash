@@ -1,5 +1,4 @@
 NCCVECTOR_ALIASES=true
-echo "nccvector: Aliases Registered" 
 
 # Status
 alias gst='git status'
