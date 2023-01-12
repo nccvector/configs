@@ -1,8 +1,7 @@
 #!/bin/bash -i
 
-echo "$BASH_SOURCE"
+# echo "$BASH_SOURCE" # complete path till this file
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-echo "$SCRIPT_DIR"
 
 # Sourcing all the shit
-for f in ./customcommands/*; do source $f; echo "sourced $f"; done
+for f in $SCRIPT_DIR/*; do source $f; echo "sourced $f"; done
