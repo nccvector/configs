@@ -1,5 +1,7 @@
 NCCVECTOR_FUNCTIONS=true
 
+# TODO DELETE THIS DUMMY LINE
+#
 # GIT FUNCTIONS
 # Git commit and push
 function gcops {
