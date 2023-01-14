@@ -21,3 +21,7 @@ function gcosu {
     # git push -u origin/$BRANCH_NAME
 }
 
+# NVIM FUNCTIONS
+function nv {
+    nvim "+set titlestring=$1"
+}
