@@ -20,3 +20,7 @@ alias gps='git push'
 
 # Set upstream
 alias gsu='git push -u'
+
+# Grepping
+alias ggr='git grep'
+alias ggn='git grep --no-index'
