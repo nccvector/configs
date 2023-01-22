@@ -25,7 +25,7 @@ local buffermappings = {
     b = { ':Telescope buffers<cr>', 'Show Buffer List' },
     n = { ':bnext<cr>', 'Next Buffer' },
     p = { ':bprevious<cr>', 'Previous Buffer' },
-    d = { ':bdelete<cr>', 'Delete Buffer' },
+    d = { ':bprevious|bdelete #<cr>', 'Delete Buffer' },  -- Move previous buffer in current window and then delete current
     H = { '<C-w><S-h><cr>', 'Move buffer left' },
     L = { '<C-w><S-l><cr>', 'Move buffer right' },
     J = { '<C-w><S-j><cr>', 'Move buffer down' },
@@ -67,7 +67,9 @@ local togglemappings = {
     name = 'Toggle',
     n = { function() ToggleLineNumber() end, 'Toggle Line Number' },
     t = { ':ToggleTerm<cr>', 'Toggle Terminal' },
-    l = { ':Telescope live_grep<cr>', 'Toggle Terminal' }
+    f = { ':FloatermNew --height=0.8 --width=0.8<cr>', 'Floating Terminal' },
+    g = { ':FloatermNew --height=1.0 --width=1.0 --name=lazygit lazygit<cr>', 'Lazygit' },
+    l = { ':Telescope live_grep<cr>', 'Live Grep' }
   }
 }
 

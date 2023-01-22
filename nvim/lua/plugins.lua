@@ -43,6 +43,10 @@ return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use 'APZelos/blamer.nvim'
+
+  use 'voldikss/vim-floaterm'
+
   use 'nvie/vim-flake8'
 
   use "savq/melange"
