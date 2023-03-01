@@ -3,9 +3,9 @@
   borderless = True
   tab_position = hidden
   title_transmit_bg_color = "#ffffff"
-  inactive_color_offset = 0.6098484848484849
+  inactive_color_offset = 0.8088888888888889
   title_use_system_font = False
-  title_font = Fira Code weight=453 10
+  title_font = Fira Code weight=453 8
 [keybindings]
   go_next = <Primary><Shift>k
   go_prev = <Primary><Shift>j
@@ -19,13 +19,14 @@
   [[default]]
     icon_bell = False
     background_color = "#282828"
-    background_darkness = 0.9
+    background_darkness = 0.95
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = Fira Code weight=453 11
+    font = Fira Code weight=453 8
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
+    scrollback_lines = 50000
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
 [layouts]
