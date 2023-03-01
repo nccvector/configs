@@ -27,3 +27,7 @@ lua require('telescope-config')
 " Setting transparent background
 " :highlight Normal guibg=none
 " :highlight NonText guibg=none
+
+let g:deoplete#enable_at_startup = 1
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
