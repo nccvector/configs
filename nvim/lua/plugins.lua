@@ -43,6 +43,17 @@ return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use 'Shougo/deoplete.nvim'
+
+  -- using packer
+  use {
+    'amirali/yapf.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+    config = function()
+      require('yapf').setup {}
+    end,
+  }
+
   use 'APZelos/blamer.nvim'
 
   use 'voldikss/vim-floaterm'
