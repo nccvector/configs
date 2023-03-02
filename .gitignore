@@ -3,4 +3,6 @@
 !nvim
 !terminator
 
+!*.sh
+
 nvim/plugin

@@ -18,10 +18,26 @@ local windowmappings = {
   }
 }
 
+function BufferFold()
+  filetype = vim.bo.filetype
+
+  if filetype == 'python' or filetype == 'lua' or filetype == 'yaml' then
+    vim.o.foldmethod = 'indent'
+  end
+
+  if filetype == 'cpp' or filetype == 'json' then
+    vim.o.syntax = true
+    vim.o.foldmethod = 'syntax'
+  end
+
+  print("Detected filetype", filetype)
+end
+
 -- Buffer
 local buffermappings = {
   b = {
     name = 'Buffer',
+    f = { function() BufferFold() end, 'Fold' },
     b = { ':Telescope buffers<cr>', 'Show Buffer List' },
     n = { ':bnext<cr>', 'Next Buffer' },
     p = { ':bprevious<cr>', 'Previous Buffer' },
@@ -80,4 +96,3 @@ wk.register(filemappings, opts)
 wk.register(quitmappings, opts)
 wk.register(togglemappings, opts)
 wk.register(buffermappings, opts)
-
