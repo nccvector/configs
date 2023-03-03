@@ -15,6 +15,7 @@ local windowmappings = {
     j = { '<C-w>j', 'Jump Down' },
     v = { '<C-w>v', 'Split vertical' },
     s = { '<C-w>s', 'Split horizontal' },
+    d = { '<C-w>q', 'Close window' },
   }
 }
 
@@ -53,12 +54,12 @@ local buffermappings = {
 local filemappings = {
   f = {
     name = 'File',
-    f = { ':Telescope find_files<cr>', 'Find File' },
-    r = { ':Telescope oldfiles<cr>', 'Recent Files' },
---    t = { ':NvimTreeToggle<cr>', 'Toggle File Explorer' },
-    t = { ':Telescope file_browser<cr>', 'Toggle File Explorer' },
+    f = { ':Telescope find_files<cr>', 'Find File (Telescope)' },
+    r = { ':Telescope oldfiles<cr>', 'Recent Files (Telescope)' },
+    t = { ':Telescope file_browser<cr>', 'Toggle File Explorer (Telescope)' },
+    T = { ':NvimTreeToggle<cr>', 'Toggle File Explorer' },
     s = { ':w<cr>', 'Save' },
-    n = { 'New File' }
+    n = { 'New File (Not Implemented)' }
   }
 }
 

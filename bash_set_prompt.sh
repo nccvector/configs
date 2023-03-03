@@ -14,7 +14,8 @@ BB="$Reset["
 BE="$Reset]"
 
 
-USERNAME_HOST="$Greenλ$Reset:"
+USERNAME_HOST="$BIGreenƒ$Reset:"
+# USERNAME_HOST="$Greenλ$Reset:"
 WD="$IBlue\\w$Reset"
 PR="$BGreen\$$Reset"
 

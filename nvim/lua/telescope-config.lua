@@ -16,6 +16,17 @@ require("telescope").setup {
       },
     },
   },
+  pickers = {
+    find_files = {
+      find_command = {
+          "rg",
+          ".",
+          "--files",
+--          "--hidden",
+--          "--strip-cwd-prefix"
+      }
+    }
+  }
 }
 -- To get telescope-file-browser loaded and working with telescope,
 -- you need to call load_extension, somewhere after setup function:

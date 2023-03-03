@@ -21,13 +21,14 @@ lua require('options')
 lua require('plugins')
 lua require('keymaps')
 lua require('whichkey-config')
-" lua require('nvim-tree-config')
 lua require('telescope-config')
+lua require("nvim-tree").setup()
 
 " Setting transparent background
 " :highlight Normal guibg=none
 " :highlight NonText guibg=none
 
+" Deoplete options [Tab completion, disable in Telescope buffers]
 let g:deoplete#enable_at_startup = 1
-
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+autocmd FileType TelescopePrompt call deoplete#custom#buffer_option('auto_complete', v:false)
