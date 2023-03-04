@@ -83,8 +83,9 @@ local togglemappings = {
   t = {
     name = 'Toggle',
     n = { function() ToggleLineNumber() end, 'Toggle Line Number' },
-    t = { ':ToggleTerm<cr>', 'Toggle Terminal' },
-    T = { ':!terminator<cr>', 'New Terminator Window' },
+    t = { ':term<cr>', 'Terminal' },
+    T = { ':ToggleTerm<cr>', 'Toggle Terminal' },
+--    T = { ':!terminator<cr>', 'New Terminator Window' },
     f = { ':FloatermNew --height=0.8 --width=0.8<cr>', 'Floating Terminal' },
     g = { ':FloatermNew --height=1.0 --width=1.0 --name=lazygit lazygit<cr>', 'Lazygit' },
     l = { ':Telescope live_grep<cr>', 'Live Grep' }
