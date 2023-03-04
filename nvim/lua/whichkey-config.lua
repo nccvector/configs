@@ -84,9 +84,19 @@ local togglemappings = {
     name = 'Toggle',
     n = { function() ToggleLineNumber() end, 'Toggle Line Number' },
     t = { ':ToggleTerm<cr>', 'Toggle Terminal' },
+    T = { ':!terminator<cr>', 'New Terminator Window' },
     f = { ':FloatermNew --height=0.8 --width=0.8<cr>', 'Floating Terminal' },
     g = { ':FloatermNew --height=1.0 --width=1.0 --name=lazygit lazygit<cr>', 'Lazygit' },
     l = { ':Telescope live_grep<cr>', 'Live Grep' }
+  }
+}
+
+local executionmappings = {
+  e = {
+    name = 'Execute',
+    m = { ':!./make.sh<cr>', 'Make script' },
+    b = { ':!./build.sh<cr>', 'Build script' },
+    r = { ':!./run.sh<cr>', 'Run script' },
   }
 }
 
@@ -97,3 +107,4 @@ wk.register(filemappings, opts)
 wk.register(quitmappings, opts)
 wk.register(togglemappings, opts)
 wk.register(buffermappings, opts)
+wk.register(executionmappings, opts)
