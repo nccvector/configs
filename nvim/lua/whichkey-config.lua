@@ -101,14 +101,30 @@ local executionmappings = {
   }
 }
 
+-- Toggle (quick)
+function DebugContinue()
+  require('dap').continue()
+  require('dapui').open()
+end
+
 local debugmappings = {
   d = {
     name = 'Debugging',
-    c = { ':DapContinue<cr>', 'Start/Attach/Continue' },
+    c = { function() DebugContinue() end, 'Start/Attach/Continue' },
     b = { ':DapToggleBreakpoint<cr>', 'Toggle Breakpoint' },
     n = { ':DapStepOver<cr>', 'Step: next' },
     i = { ':DapStepInto<cr>', 'Step: into' },
     o = { ':DapStepOut<cr>', 'Step: out' },
+    l = { function() require('dapui').toggle() end, 'Toggle UI' },
+    h = { 
+      function() 
+        require('dapui').eval(nil, {
+          width=120,
+          height=30,
+          enter=true,
+          position='center'
+        }) 
+      end, 'Hover Evaluate Expression' },
   }
 }
 

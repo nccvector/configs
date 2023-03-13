@@ -54,7 +54,12 @@ return packer.startup(function(use)
     end,
   }
 
+  -- Icons
+  use 'mortepau/codicons.nvim'
+
+  -- Debugging plugins
   use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   use 'APZelos/blamer.nvim'
 

@@ -23,6 +23,8 @@ lua require('keymaps')
 lua require('whichkey-config')
 lua require('telescope-config')
 lua require("nvim-tree").setup()
+
+" Debugging
 lua require('debugging-config')
 
 
