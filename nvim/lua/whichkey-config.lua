@@ -101,6 +101,17 @@ local executionmappings = {
   }
 }
 
+local debugmappings = {
+  d = {
+    name = 'Debugging',
+    c = { ':DapContinue<cr>', 'Start/Attach/Continue' },
+    b = { ':DapToggleBreakpoint<cr>', 'Toggle Breakpoint' },
+    n = { ':DapStepOver<cr>', 'Step: next' },
+    i = { ':DapStepInto<cr>', 'Step: into' },
+    o = { ':DapStepOut<cr>', 'Step: out' },
+  }
+}
+
 local opts = { prefix = '<leader>' }
 
 wk.register(windowmappings, opts)
@@ -109,3 +120,4 @@ wk.register(quitmappings, opts)
 wk.register(togglemappings, opts)
 wk.register(buffermappings, opts)
 wk.register(executionmappings, opts)
+wk.register(debugmappings, opts)

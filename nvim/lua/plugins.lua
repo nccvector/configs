@@ -54,6 +54,8 @@ return packer.startup(function(use)
     end,
   }
 
+  use 'mfussenegger/nvim-dap'
+
   use 'APZelos/blamer.nvim'
 
   use 'voldikss/vim-floaterm'
