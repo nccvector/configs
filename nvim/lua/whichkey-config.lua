@@ -125,6 +125,15 @@ local debugmappings = {
           position='center'
         }) 
       end, 'Hover Evaluate Expression' },
+    H = { 
+      function() 
+        require('dapui').eval(nil, {
+          width=1000,
+          height=500,
+          enter=true,
+          position='center'
+        }) 
+      end, 'Hover Evaluate Expression' },
   }
 }
 
