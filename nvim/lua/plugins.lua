@@ -54,6 +54,24 @@ return packer.startup(function(use)
     end,
   }
 
+  -- Statusline
+  use({
+    'glepnir/galaxyline.nvim',
+    branch = 'main',
+    -- your statusline
+    config = function()
+      require('my_statusline')
+    end,
+    -- some optional icons
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  })
+
+  -- nvim-gps
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+  }
+
   -- Icons
   use 'mortepau/codicons.nvim'
 

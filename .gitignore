@@ -1,7 +1,7 @@
 *
 
-!nvim
-!terminator
+!nvim/**/*
+!terminator/**/*
 
 !*.sh
 
