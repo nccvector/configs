@@ -24,6 +24,7 @@ lua require('whichkey-config')
 lua require('telescope-config')
 lua require("nvim-tree").setup()
 lua require("statusline")
+lua require("lsp-config")
 
 " Debugging
 lua require('debugging-config')
@@ -33,7 +34,7 @@ lua require('debugging-config')
 " :highlight Normal guibg=none
 " :highlight NonText guibg=none
 
-" Deoplete options [Tab completion, disable in Telescope buffers]
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-autocmd FileType TelescopePrompt call deoplete#custom#buffer_option('auto_complete', v:false)
+" " Deoplete options [Tab completion, disable in Telescope buffers]
+" let g:deoplete#enable_at_startup = 1
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" autocmd FileType TelescopePrompt call deoplete#custom#buffer_option('auto_complete', v:false)

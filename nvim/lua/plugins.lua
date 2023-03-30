@@ -43,16 +43,16 @@ return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'Shougo/deoplete.nvim'
+  -- LSP
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
-  -- using packer
+  -- Code context
   use {
-    'amirali/yapf.nvim',
-    requires = {'nvim-lua/plenary.nvim'},
-    config = function()
-      require('yapf').setup {}
-    end,
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
   }
+
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Statusline
   use({
@@ -65,12 +65,6 @@ return packer.startup(function(use)
     -- some optional icons
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   })
-
-  -- nvim-gps
-  use {
-    "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig"
-  }
 
   -- Icons
   use 'mortepau/codicons.nvim'

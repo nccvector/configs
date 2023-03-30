@@ -2,6 +2,7 @@ local gl = require('galaxyline')
 local gls = gl.section
 local extension = require('galaxyline.provider_extensions')
 local dap = require('dap')
+local gps = require('nvim-navic')
 
 gl.short_line_list = {
     'LuaTree',
@@ -394,10 +395,10 @@ gls.left[15] = {
 gls.left[17] = {
 nvimGPS = {
         provider = function()
---            return gps.get_location()
+            return gps.get_location()
         end,
         condition = function()
---            return gps.is_available()
+            return gps.is_available()
         end,
         icon = '  ',
         highlight = {colors.yellow,colors.bg},

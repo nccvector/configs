@@ -1,10 +1,6 @@
 local wk = require('which-key')
 wk.setup {}
 
--- Cheating, setting up neogit in which key config
-local neogit = require('neogit')
-neogit.setup {}
-
 -- Window
 local windowmappings = {
   w = {
@@ -101,7 +97,7 @@ local executionmappings = {
   }
 }
 
--- Toggle (quick)
+-- DAP
 function DebugContinue()
   require('dap').continue()
   require('dapui').open()
