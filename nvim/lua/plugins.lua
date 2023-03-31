@@ -43,53 +43,9 @@ return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- LSP
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-
-  -- Code context
-  use {
-    "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig"
-  }
-
-  use 'nvim-tree/nvim-web-devicons'
-
-  -- Statusline
-  use({
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
-    -- your statusline
-    config = function()
-      require('my_statusline')
-    end,
-    -- some optional icons
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-  })
-
-  -- Icons
-  use 'mortepau/codicons.nvim'
-
-  -- Debugging plugins
-  use 'mfussenegger/nvim-dap'
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
-  use 'APZelos/blamer.nvim'
-
-  use 'voldikss/vim-floaterm'
-
-  use 'nvie/vim-flake8'
-
-  use "savq/melange"
-
-  use { 'RRethy/vim-illuminate' }
-
-  use { 'tpope/vim-fugitive' }
-
   use { 'morhetz/gruvbox' }
 
   use { 'nvim-lua/plenary.nvim' }
-  
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -97,17 +53,12 @@ return packer.startup(function(use)
   }
 
   use { "nvim-telescope/telescope-file-browser.nvim" }
-  
-  use {
-    'kyazdani42/nvim-tree.lua',
-    tag = 'nightly', -- optional, updated every week. (see issue #1193)
-  }
 
   use { 'folke/which-key.nvim' }
 
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end}
+  -- Icons
+  use 'nvim-tree/nvim-web-devicons'
+  use 'mortepau/codicons.nvim'
 
   if PACKER_BOOTSTRAP then
 		require("packer").sync()
