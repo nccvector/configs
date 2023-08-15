@@ -21,10 +21,9 @@
     icon_bell = False
     background_color = "#1e1e1e"
     background_darkness = 0.95
-    background_type = transparent
     cursor_color = "#bbbbbb"
     cursor_color_fg = False
-    font = Fira Code weight=453 11
+    font = JetBrainsMono Nerd Font 11
     foreground_color = "#e6d4a3"
     show_titlebar = False
     scrollbar_position = hidden
