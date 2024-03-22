@@ -16,6 +16,7 @@
   go_right = <Primary>l
   split_horiz = <Primary><Alt>minus
   split_vert = <Primary><Alt>backslash
+  layout_launcher = <Primary><Shift><Alt>l
 [profiles]
   [[default]]
     icon_bell = False
