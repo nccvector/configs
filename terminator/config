@@ -23,7 +23,7 @@
     background_darkness = 0.95
     cursor_color = "#bbbbbb"
     cursor_color_fg = False
-    font = JetBrainsMono Nerd Font 11
+    font = Fira Code weight=453 11
     foreground_color = "#e6d4a3"
     show_titlebar = False
     scrollbar_position = hidden
