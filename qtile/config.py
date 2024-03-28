@@ -45,7 +45,8 @@ keys = [
     Key([mod], '2', lazy.to_screen(1), desc='Monitor 2'),
     Key([mod], '3', lazy.to_screen(2), desc='Monitor 3'),
 
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(), desc="Move focus to other stack"),
+    Key([mod, "shift"], "space", lazy.layout.client_to_next(), desc="Move window focus to other stack"),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
 
     # Move windows between left/right columns or move up/down in current stack.
@@ -131,8 +132,8 @@ for vt in range(1, 8):
 layouts = [
     layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=1),
     layout.MonadTall(),
+    layout.Max(),
     layout.Stack(num_stacks=2),
-    # layout.Max(),
     # layou.Bsp(),
     # layout.Matrix(),
     # layout.MonadWide(),
@@ -152,6 +153,8 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        wallpaper='~/wallpapers/sky.jpg',
+        wallpaper_mode='stretch',
         bottom=bar.Bar(
             [
                 widget.TextBox("Layout: ", name="currentLayoutLabel"),
@@ -178,6 +181,8 @@ screens = [
         # x11_drag_polling_rate = 60,
     ),
     Screen(
+        wallpaper='~/wallpapers/sky.jpg',
+        wallpaper_mode='stretch',
         bottom=bar.Bar(
             [
                 widget.TextBox("Layout: ", name="currentLayoutLabel"),
@@ -204,6 +209,8 @@ screens = [
         # x11_drag_polling_rate = 60,
     ),
     Screen(
+        wallpaper='~/wallpapers/sky.jpg',
+        wallpaper_mode='stretch',
         bottom=bar.Bar(
             [
                 widget.TextBox("Layout: ", name="currentLayoutLabel"),
