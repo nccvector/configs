@@ -1,7 +1,25 @@
 #!/bin/bash -i
 
-# echo "$BASH_SOURCE" # complete path till this file
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+## Bashrc source, view, edit
+alias src='source ~/.bashrc'   # Source bashrc
+alias erc='nvim ~/.bashrc'    # Edit bashrc
 
-# Sourcing all the shit
-for f in $SCRIPT_DIR/customcommands/*; do source $f; echo "sourced $f"; done
+## jetbrains
+alias pyc='nohup ~/pycharm/bin/pycharm.sh &'
+alias cli='nohup ~/clion/bin/clion.sh &'
+
+## Rip grep
+alias rgf='rg --files'
+alias rgfg='rg --files | rg -i'
+
+## Scratch buffer
+alias scratch='nvim ~/.scratch'
+
+## 
+alias cls='clear'
+
+## Tmux by default
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
